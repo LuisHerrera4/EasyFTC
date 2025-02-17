@@ -1,70 +1,80 @@
 <template>
-    <ion-page>
-      <ion-content fullscreen>
-        <div class="container">
-          <!-- Logo (reemplaza la ruta según corresponda) -->
-          <img src="@/assets/logo.gif" alt="Logo" class="logo" />
-          
-          <!-- Título -->
-          <h1 class="title">EasyFTC</h1>
-          
-          <!-- Botones -->
-          <div class="buttons">
-            <ion-button expand="block" fill="outline" class="button">Compañía</ion-button>
-            <ion-button expand="block" fill="outline" class="button">Profesor</ion-button>
-            <ion-button expand="block" fill="outline" class="button">Alumno</ion-button>
-            <ion-button expand="block" fill="outline" class="button">Admin</ion-button>
-          </div>
+  <ion-page>
+    <ion-content fullscreen>
+      <div class="container">
+        <!-- Logo (reemplaza la ruta según corresponda) -->
+        <img src="@/assets/logo.gif" alt="Logo" class="logo" />
+        
+        <!-- Título -->
+        <h1 class="title">EasyFTC</h1>
+        
+        <!-- Botones -->
+        <div class="buttons">
+          <ion-button expand="block" fill="outline" class="button">Compañía</ion-button>
+          <ion-button expand="block" fill="outline" class="button">Profesor</ion-button>
+          <ion-button expand="block" fill="outline" class="button">Alumno</ion-button>
+          <ion-button expand="block" fill="outline" class="button">Admin</ion-button>
         </div>
-      </ion-content>
-    </ion-page>
-  </template>
-  
-  <script>
-  import { IonPage, IonContent, IonButton } from '@ionic/vue';
-  
-  export default {
-    name: 'HomePage',
-    components: {
-      IonPage,
-      IonContent,
-      IonButton,
-    },
-  };
-  </script>
-  
-  <style scoped>
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 16px;
-    background-color: #f8f8f8;
-  }
-  
-  .logo {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
-  }
-  
-  .title {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #333;
-  }
-  
-  .buttons {
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .button {
-    margin-bottom: 16px;
-    border-radius: 8px;
-  }
-  </style>
-  
+      </div>
+    </ion-content>
+  </ion-page>
+</template>
+
+<script>
+import { IonPage, IonContent, IonButton } from '@ionic/vue';
+
+export default {
+  name: 'HomePage',
+  components: {
+    IonPage,
+    IonContent,
+    IonButton,
+  },
+};
+</script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap');
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 16px;
+  background-color: #f8f8f8;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+
+.buttons {
+  width: 100%;
+  max-width: 300px;
+}
+
+.button {
+  font-size: 15px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  --border-width: 1px;
+  --border-color: #1E232C;
+  color: #1E232C;
+  --ion-color-base: transparent;
+}
+</style>
