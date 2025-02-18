@@ -10,10 +10,10 @@
         
         <!-- Botones -->
         <div class="buttons">
-          <ion-button expand="block" fill="outline" class="button">Compañía</ion-button>
-          <ion-button expand="block" fill="outline" class="button">Profesor</ion-button>
-          <ion-button expand="block" fill="outline" class="button">Alumno</ion-button>
-          <ion-button expand="block" fill="outline" class="button">Admin</ion-button>
+          <ion-button expand="block" fill="outline" class="button" router-link="/empresa">Compañía</ion-button>
+          <ion-button expand="block" fill="outline" class="button" router-link="/profesor">Profesor</ion-button>
+          <ion-button expand="block" fill="outline" class="button" router-link="/alumno">Alumno</ion-button>
+          <ion-button expand="block" fill="outline" class="button" router-link="/admin">Admin</ion-button>
         </div>
       </div>
     </ion-content>

@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
-import EleccionDeUsuario from './EleccionDeUsuario.vue';
+import EleccionDeUsuario from './Login/EleccionDeUsuario.vue';
 </script>
 
 <style scoped>
