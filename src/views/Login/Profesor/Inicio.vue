@@ -1,41 +1,38 @@
 <template>
   <ion-page>
-    <ion-header class="ion-no-border">
-      <ion-toolbar>
-        <ion-buttons slot="start">
-  <img 
-    src="@/assets/back_arrow.svg" 
-    alt="Back" 
-    class="back-button" 
-    @click="router.push('/home')" 
-  />
-</ion-buttons>
+    <ion-content>
+      <div class="ion-padding">
+        <!-- Back Button -->
+        <ion-button 
+          fill="clear" 
+          class="custom-back-button" 
+          @click="goBack"
+        >
+          <img 
+            src="@/assets/back_arrow.svg" alt="back_arrow"  class="back-arrow"
+          />
+        </ion-button>
 
-      </ion-toolbar>
-    </ion-header>
-
-    <ion-content class="ion-padding">
-      <div class="flex flex-col items-center justify-center min-h-screen px-4">
-        <div class="w-full max-w-sm space-y-8">
-          <div class="flex flex-col items-center space-y-2">
-            <div class="w-16 h-16">
-              <img src="@/assets/logo.gif" alt="EasyFCT Logo" class="logo" />
-            </div>
-            <h1 class="text-xl font-medium">EasyFCT</h1>
+        <!-- Logo and Content -->
+        <div class="content-container">
+          <div class="logo-container">
+            <img 
+              src="@/assets/logo.gif" alt="Logo" class="logo"/>
+            <h1 class="title">EasyFCT</h1>
           </div>
-          
-          <div class="space-y-4 w-full">
+
+          <div class="buttons-container">
             <ion-button 
               expand="block" 
               fill="outline" 
-              class="h-12"
+              class="register-btn"
             >
               Register
             </ion-button>
             
             <ion-button 
-              expand="block"
-              class="h-12"
+              expand="block" 
+              class="login-btn"
             >
               Login
             </ion-button>
@@ -47,12 +44,53 @@
 </template>
 
 <script setup lang="ts">
-import {IonPage, IonHeader, IonToolbar, IonButtons, IonContent, IonButton} from '@ionic/vue';
+import {
+  IonPage,
+  IonContent,
+  IonButton,
+} from '@ionic/vue';
 import { useRouter } from 'vue-router';
+
 const router = useRouter();
+
+// Asume que tienes estas imágenes en tus assets
+const backArrowSrc = '@/assets/back_arrow.svg';
+const logoSrc = '@/assets/logo.gif';
+
+const goBack = () => {
+  router.go(-1);
+};
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap');
+
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.custom-back-button {
+  --padding-start: 0;
+  --padding-end: 0;
+  margin-bottom: 2rem;
+  height: 44px;
+}
+
+.back-arrow {
+  width: 24px;
+  height: 24px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
 
 .logo {
   width: 100px;
@@ -60,13 +98,45 @@ const router = useRouter();
   margin-bottom: 20px;
 }
 
-ion-button {
-  --padding-top: 1rem;
-  --padding-bottom: 1rem;
+.title {
+  font-size: 28px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #333;
 }
 
-/* Make sure the back button icon is black */
-ion-back-button::part(icon) {
-  color: black;
+.buttons-container {
+  width: 331px;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
+
+.register-btn {
+  font-size: 15px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  --border-width: 1px;
+  --border-color: #1E232C;
+  color: #1E232C;
+  --ion-color-base: transparent;
+}
+
+.login-btn {
+  font-size: 15px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  --background: #000;
+  --color: #fff;
+  --border-radius: 4px;
+  --padding-top: 1.5px;
+  --padding-bottom: 1.5px;
+}
+
+
+
 </style>
