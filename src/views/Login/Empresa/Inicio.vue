@@ -9,7 +9,7 @@
           @click="goBack"
         >
           <img 
-            src="@/assets/back_arrow.svg" alt="back_arrow"  class="back-arrow"
+            src="/back_arrow.svg" alt="back_arrow"  class="back-arrow"
           />
         </ion-button>
 
@@ -17,7 +17,7 @@
         <div class="content-container">
           <div class="logo-container">
             <img 
-              src="@/assets/logo.gif" alt="Logo" class="logo"/>
+              src="/logo.gif" alt="Logo" class="logo"/>
             <h1 class="title">EasyFCT</h1>
           </div>
 
@@ -51,8 +51,8 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 // Asume que tienes estas imágenes en tus assets
-const backArrowSrc = '@/assets/back_arrow.svg';
-const logoSrc = '@/assets/logo.gif';
+const backArrowSrc = '/back_arrow.svg';
+const logoSrc = '/logo.gif';
 
 const goBack = () => {
   router.go(-1);

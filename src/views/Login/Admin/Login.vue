@@ -3,7 +3,7 @@
       <ion-content :fullscreen="true">
         <div class="container">
           <div class="logo-container">
-            <img src="@/assets/logo.gif" alt="EasyFCT Logo" class="logo">
+            <img src="/logo.gif" alt="EasyFCT Logo" class="logo">
             <h1>EasyFCT</h1>
           </div>
   

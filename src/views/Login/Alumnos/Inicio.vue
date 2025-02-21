@@ -2,39 +2,34 @@
   <ion-page>
     <ion-content>
       <div class="ion-padding">
-        <!-- Botón de Retroceso -->
+        <!-- Back Button -->
         <ion-button 
           fill="clear" 
           class="custom-back-button" 
           @click="goBack"
         >
           <img 
-            src="@/assets/back_arrow.svg" alt="back_arrow" class="back-arrow"
+            src="/back_arrow.svg" alt="back_arrow"  class="back-arrow"
           />
         </ion-button>
 
-        <!-- Logo y Contenido -->
+        <!-- Logo and Content -->
         <div class="content-container">
           <div class="logo-container">
             <img 
-              src="@/assets/logo.gif" alt="Logo" class="logo"/>
+              src="/logo.gif" alt="Logo" class="logo"/>
             <h1 class="title">EasyFCT</h1>
           </div>
 
           <div class="buttons-container">
-            <ion-button 
-              expand="block" 
-              fill="outline" 
-              class="register-btn"
-              router-link="/alumno/register"
+            <ion-button expand="block" fill="outline" class="register-btn" router-link="/"
             >
               Register
             </ion-button>
             
             <ion-button 
-              expand="block" 
-              class="login-btn"
-              router-link="/alumno/login"
+             expand="block" 
+             class="login-btn"
             >
               Login
             </ion-button>
@@ -55,6 +50,10 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
+// Asume que tienes estas imágenes en tus assets
+const backArrowSrc = '/back_arrow.svg';
+const logoSrc = '/logo.gif';
+
 const goBack = () => {
   router.go(-1);
 };
@@ -62,6 +61,7 @@ const goBack = () => {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap');
+
 
 .content-container {
   display: flex;
@@ -104,14 +104,17 @@ const goBack = () => {
 }
 
 .buttons-container {
+  margin-top: 50px;
   width: 331px;
-  height: auto;
+  height: 56px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .register-btn {
+  width: 331px;
+  height: 56px;
   font-size: 15px;
   font-family: 'Lexend', sans-serif;
   font-weight: 500;
@@ -124,13 +127,18 @@ const goBack = () => {
 }
 
 .login-btn {
+  width: 331px;
+  height: 56px;
   font-size: 15px;
   font-family: 'Lexend', sans-serif;
   font-weight: 500;
   --background: #000;
   --color: #fff;
   --border-radius: 4px;
-  --padding-top: 10px;
-  --padding-bottom: 10px;
+  --padding-top: 1.5px;
+  --padding-bottom: 1px;
 }
+
+
+
 </style>

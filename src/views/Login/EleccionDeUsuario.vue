@@ -3,7 +3,7 @@
     <ion-content fullscreen>
       <div class="container">
         <!-- Logo (reemplaza la ruta según corresponda) -->
-        <img src="@/assets/logo.gif" alt="Logo" class="logo" />
+        <img src="/logo.gif" alt="Logo" class="logo" />
         
         <!-- Título -->
         <h1 class="title">EasyFTC</h1>
