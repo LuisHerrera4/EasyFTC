@@ -1,11 +1,21 @@
 <template>
   <ion-page>
-    <ion-content :fullscreen="true">
+    <ion-content >
+
+       <!-- Botón de Retroceso con imagen -->
+       <ion-button 
+          fill="clear" 
+          class="custom-back-button" 
+          @click="goBack"
+        >
+          <img 
+            src="/back_arrow.svg" alt="back_arrow"  class="back-arrow"
+          />
+        </ion-button>
+
+        
       <div class="ion-padding">
-        <!-- Botón de Retroceso con imagen -->
-        <button class="back-button" @click="goBack">
-          <img src="/back_arrow.svg" alt="Volver" class="back-icon" />
-        </button>
+       
 
         <!-- Formulario de Login -->
         <div class="login-container">
@@ -13,7 +23,7 @@
 
           <form @submit.prevent="handleLogin" class="login-form">
             <ion-item class="custom-input">
-              <ion-input v-model="email" label="Correo" type="email" required />
+              <ion-input v-model="email" label="Email" type="email" required />
             </ion-item>
 
             <ion-item class="custom-input">
@@ -45,7 +55,7 @@
           <!-- Enlace para registrarse -->
           <p class="signup-text">
             ¿No tienes cuenta?
-            <ion-router-link to="/profesor/register" class="signup-link">Regístrate aquí</ion-router-link>
+            <router-link to="/profesor/register" class="signup-link">Regístrate aquí</router-link>
           </p>
         </div>
       </div>
@@ -93,15 +103,18 @@ const handleLogin = async () => {
   display: flex;
   align-items: center;
   transition: transform 0.2s ease-in-out;
+
 }
 
 .back-button:hover {
   transform: scale(1.1);
 }
 
-.back-icon {
-  width: 32px;
-  height: 32px;
+.back-arrow {
+  width: 24px;
+  height: 24px;
+  --padding-start: 0;
+  --padding-end: 0;
 }
 
 /* Contenedor del login */
@@ -215,7 +228,7 @@ ion-input {
 }
 
 .signup-link {
-  color: #000;
+  color: #2196F3;
   font-weight: 500;
 }
 </style>

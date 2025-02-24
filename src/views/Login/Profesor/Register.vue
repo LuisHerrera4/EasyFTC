@@ -8,12 +8,14 @@
             class="custom-back-button" 
             @click="goBack"
           >
-            <ion-icon :icon="chevronBack" class="back-icon" />
+          <img 
+            src="/back_arrow.svg" alt="back_arrow"  class="back-arrow"
+          />
           </ion-button>
   
           <!-- Register Form -->
           <div class="register-container">
-            <h1 class="welcome-text">Hello! Register to<br />get started</h1>
+            <h1 class="welcome-text">Hola! Regístrate para<br />empezar</h1>
   
             <form @submit.prevent="handleRegister" class="register-form">
               <ion-item class="custom-input">
@@ -29,7 +31,7 @@
                 <ion-input
                   v-model="password"
                   :type="showPassword ? 'text' : 'password'"
-                  label="Password"
+                  label="Contraseña"
                   required
                 />
                 <button 
@@ -50,7 +52,7 @@
                 <ion-input
                   v-model="confirmPassword"
                   :type="showConfirmPassword ? 'text' : 'password'"
-                  label="Confirm password"
+                  label="Confirmar contraseña"
                   required
                 />
                 <button 
@@ -72,14 +74,14 @@
                 type="submit"
                 class="register-btn"
               >
-                Register
+                Regístrate
               </ion-button>
             </form>
   
             <!-- Social Login -->
             <div class="social-login">
               <div class="divider">
-                <span class="divider-text">Or Login with</span>
+                <span class="divider-text">O ingresa con</span>
               </div>
               
               <div class="social-buttons">
@@ -127,10 +129,10 @@
   
             <!-- Login Link -->
             <p class="login-text">
-              Already have an account? 
-              <ion-router-link href="/login" class="login-link">
-                Login Now
-              </ion-router-link>
+              Ya tienes una cuenta creada? 
+              <router-link to="/profesor/login" class="login-link">
+                Inicia Sesión
+              </router-link>
             </p>
           </div>
         </div>
@@ -191,12 +193,7 @@
   .custom-back-button {
     margin-bottom: 32px;
   }
-  
-  .back-icon {
-    font-size: 24px;
-    color: #000;
-  }
-  
+
   .register-container {
     width: 100%;
   }

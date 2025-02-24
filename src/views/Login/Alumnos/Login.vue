@@ -1,19 +1,20 @@
 <template>
   <ion-page>
     <ion-content :fullscreen="true">
-      <div class="ion-padding">
-        <!-- Botón de Retroceso con imagen -->
-        <button class="back-button" @click="goBack">
+
+      <!-- Botón de Retroceso con imagen -->
+      <button class="back-button" @click="goBack">
           <img src="/back_arrow.svg" alt="Volver" class="back-icon" />
         </button>
-
+      <div class="ion-padding">
+        
         <!-- Formulario de Login -->
         <div class="login-container">
           <h1 class="welcome-text">Bienvenido de nuevo</h1>
 
           <form @submit.prevent="handleLogin" class="login-form">
             <ion-item class="custom-input">
-              <ion-input v-model="email" label="Correo" type="email" required />
+              <ion-input v-model="email" label="Email" type="email" required />
             </ion-item>
 
             <ion-item class="custom-input">
@@ -99,10 +100,6 @@ const handleLogin = async () => {
   transform: scale(1.1);
 }
 
-.back-icon {
-  width: 32px;
-  height: 32px;
-}
 
 /* Contenedor del login */
 .login-container {
@@ -215,7 +212,7 @@ ion-input {
 }
 
 .signup-link {
-  color: #000;
+  color: #2196F3;
   font-weight: 500;
 }
 </style>

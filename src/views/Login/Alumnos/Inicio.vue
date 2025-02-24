@@ -22,7 +22,7 @@
           </div>
 
           <div class="buttons-container">
-            <ion-button expand="block" fill="outline" class="register-btn" router-link="/"
+            <ion-button expand="block" fill="outline" class="register-btn" router-link="/alumno/register"
             >
               Register
             </ion-button>
@@ -30,6 +30,7 @@
             <ion-button 
              expand="block" 
              class="login-btn"
+             router-link="/alumno/login"
             >
               Login
             </ion-button>
