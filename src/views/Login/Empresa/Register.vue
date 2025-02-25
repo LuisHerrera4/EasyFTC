@@ -73,6 +73,7 @@
               expand="block" 
               type="submit"
               class="register-btn"
+              router-link="/Empresa/Inicio"
             >
               Regístrate
             </ion-button>

@@ -13,7 +13,7 @@
         <div class="login-container">
           <h1 class="welcome-text">Bienvenido de nuevo</h1>
 
-          <form @submit.prevent="handleLogin" class="login-form">
+          <form class="login-form">
             <ion-item class="custom-input">
               <ion-input v-model="email" label="Email" type="email" required />
             </ion-item>
@@ -25,7 +25,7 @@
               </button>
             </ion-item>
 
-            <ion-button expand="block" type="submit" class="login-btn">Iniciar sesión</ion-button>
+            <ion-button expand="block" type="submit" class="login-btn" router-link="/Empresa/Inicio">Iniciar sesión</ion-button>
           </form>
 
           <!-- Login con Redes Sociales -->
@@ -73,9 +73,7 @@ const togglePassword = () => {
   showPassword.value = !showPassword.value;
 };
 
-const handleLogin = async () => {
-  console.log("Intentando iniciar sesión con:", email.value, password.value);
-};
+
 </script>
 
 <style scoped>

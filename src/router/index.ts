@@ -18,6 +18,9 @@ import EmpresaRegister from '../views/Login/Empresa/Register.vue';
 import ProfesorLogin from '../views/Login/Profesor/Login.vue';
 import ProfesorRegister from '../views/Login/Profesor/Register.vue';
 
+//Imports Pantallas Empresa
+import InicioEmpresa from '../views/Empresa/Inicio.vue'
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -83,6 +86,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/profesor/register',
     name: 'ProfesorRegister',
     component: ProfesorRegister
+  },
+
+  {
+    path: '/Empresa/Inicio',
+    name: 'InicioEmpresa',
+    component: InicioEmpresa
   }
 ];
 
