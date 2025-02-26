@@ -2,10 +2,11 @@
   <ion-page>
     <ion-content :fullscreen="true">
 
-      <!-- Botón de Retroceso con imagen -->
-      <button class="back-button" @click="goBack">
-          <img src="/back_arrow.svg" alt="Volver" class="back-icon" />
-        </button>
+<!-- Botón de Retroceso con imagen -->
+<ion-button fill="clear" class="custom-back-button" @click="goBack">
+  <img src="/back_arrow.svg" alt="Volver" class="back-arrow" />
+</ion-button>
+
 
       <div class="ion-padding">
 
@@ -77,6 +78,7 @@ const togglePassword = () => {
 </script>
 
 <style scoped>
+
 /* Estilos generales */
 .ion-padding {
   padding: 24px;
@@ -85,27 +87,20 @@ const togglePassword = () => {
 }
 
 /* Botón de Retroceso */
-.back-button {
-  background: none;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  transition: transform 0.2s ease-in-out;
+.custom-back-button {
+  position: absolute;
+  top: 20px;
+  left: 10px; 
 }
 
-.back-button:hover {
-  transform: scale(1.1);
-}
-
-.back-icon {
-  width: 32px;
-  height: 32px;
+.back-arrow {
+  width: 24px;
+  height: 24px;
 }
 
 /* Contenedor del login */
 .login-container {
+  padding-top: 100px;
   width: 100%;
 }
 

@@ -4,26 +4,27 @@
       <h1 class="header-title">OFFERS</h1>
     </header>
 
-    <nav class="nav">
-      <div class="nav-container">
-        <div class="nav-buttons">
-          <button class="nav-button active" @click="navigateTo('offers')">
-            <img src="/paper.png" alt="Offers" class="nav-icon"/>
-            <span>Offers</span>
-          </button>
-          
-          <button class="nav-button" @click="navigateTo('students')">
-            <img src="/users.png" alt="Students" class="nav-icon"/>
-            <span>Students</span>
-          </button>
-          
-          <button class="nav-button" @click="navigateTo('help')">
-            <img src="/question.png" alt="Help" class="nav-icon"/>
-            <span>Help</span>
-          </button>
-        </div>
-      </div>
-    </nav>
+<nav class="nav">
+  <div class="nav-container">
+    <div class="nav-buttons">
+      <button class="nav-button active" @click="navigateTo('offers')">
+        <img src="/paper.png" alt="Offers" class="nav-icon"/>
+        <span class="nav-text">Offers</span> <!-- Texto debajo del icono -->
+      </button>
+      
+      <button class="nav-button" @click="navigateTo('students')">
+        <img src="/users.png" alt="Students" class="nav-icon"/>
+        <span class="nav-text">Students</span> <!-- Texto debajo del icono -->
+      </button>
+      
+      <button class="nav-button" @click="navigateTo('help')">
+        <img src="/question.png" alt="Help" class="nav-icon"/>
+        <span class="nav-text">Help</span> <!-- Texto debajo del icono -->
+      </button>
+    </div>
+  </div>
+</nav>
+
 
     <main class="main">
       <form @submit.prevent="handleSubmit" class="form">
@@ -153,8 +154,9 @@ const handleSubmit = () => {
 
 .nav-button {
   display: flex;
-  align-items: center;
-  gap: var(--spacing-2);
+  flex-direction: column; /* Apila el icono y el texto */
+  align-items: center; /* Centra todo */
+  gap: 4px; /* Espaciado entre el icono y el texto */
   padding: var(--spacing-2) var(--spacing-4);
   color: var(--color-gray-500);
   border: none;
@@ -169,10 +171,12 @@ const handleSubmit = () => {
 }
 
 .nav-icon {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
 }
+
+
 
 /* Main content */
 .main {
@@ -260,10 +264,7 @@ const handleSubmit = () => {
 
 /* Responsive adjustments */
 @media (max-width: 640px) {
-  .nav-button span {
-    display: none;
-  }
-  
+
   .nav-buttons {
     justify-content: space-around;
   }
